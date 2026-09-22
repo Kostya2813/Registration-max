@@ -11,316 +11,153 @@ body{min-height:100dvh}
 .screen{min-height:100dvh;position:relative;padding:0 20px;background:#17181c}
 .top{
   height:142px;margin:0 -20px;padding-top:45px;text-align:center;
-  background:#17181c
+  background:linear-gradient(125deg,#9c13a8 0%,#531d9f 38%,#075eaa 100%);
+  border-radius:0 0 42% 0/0 0 23% 0;
 }
-.logo{
-  width:72px;height:72px;margin:0 auto;border-radius:22px;
-  overflow:hidden;background:#fff
+.brand{display:inline-flex;align-items:center;gap:9px;font-size:31px;font-weight:800;letter-spacing:-1px}
+.logoImg{width:43px;height:43px;object-fit:contain;display:block;flex:none}
+.back{position:absolute;top:61px;left:39px;font-size:38px;font-weight:200;line-height:28px}
+.help{position:absolute;top:57px;right:38px;width:34px;height:34px;border:3px solid #fff;border-radius:50%;font-size:24px;font-weight:700;line-height:28px}
+.title{font-size:29px;line-height:1.18;text-align:center;margin:24px auto 30px;max-width:520px;font-weight:400}
+.field{
+  width:100%;height:70px;border-radius:23px;background:#4a4b5c;
+  display:flex;align-items:center;padding:0 19px;color:#d9d9df;font-size:24px;
+  position:relative;z-index:2
 }
-.logo img{
-  width:100%;height:100%;display:block;object-fit:cover
+.flag{font-size:25px;margin-right:9px}
+.phone{
+  flex:1;width:1px;min-width:0;height:52px;padding:0;margin:0;
+  background:transparent;border:0;outline:0;color:#fff;font-size:24px;
+  font-family:Arial,Helvetica,sans-serif;caret-color:#1687f5;
+  -webkit-appearance:none;appearance:none;pointer-events:auto;position:relative;z-index:3
 }
-.content{
-  max-width:420px;margin:0 auto;padding-top:30px
+.phone::placeholder{color:#c9c9d0;opacity:.95}
+.hint{font-size:18px;line-height:1.25;color:#777982;margin:9px 18px 0}
+.next{
+  position:absolute;left:20px;right:20px;bottom:110px;height:64px;border:0;border-radius:22px;
+  background:#35363b;color:#777980;font-size:22px;font-weight:500;
+  -webkit-tap-highlight-color:transparent
 }
-h1{
-  margin:0;text-align:center;font-size:27px;line-height:1.15;
-  font-weight:700;letter-spacing:-.5px
+.next.enabled{background:#1687f5;color:#fff}
+.legal{position:absolute;left:22px;right:22px;bottom:17px;text-align:center;color:#ddd;font-size:16px;line-height:1.25}
+.legal span{color:#fff}
+.hidden{display:none!important}
+
+.passwordWrap{padding-top:25px}
+.passwordTitle{font-size:30px;text-align:center;line-height:1.2;margin:25px auto 18px}
+.passwordHint{text-align:center;color:#8a8b92;font-size:17px;margin:0 auto 22px}
+.passfield{
+ width:100%;height:70px;border-radius:23px;background:#4a4b5c;padding:0 19px;
+ display:flex;align-items:center;position:relative;z-index:2
 }
-.subtitle{
-  margin:10px auto 27px;text-align:center;color:#a6a7ac;
-  font-size:15px;line-height:1.4
+.pass{
+ width:1px;flex:1;min-width:0;height:52px;padding:0;border:0;outline:0;
+ background:transparent;color:white;font-size:24px;font-family:Arial,Helvetica,sans-serif;
+ caret-color:#1687f5;-webkit-appearance:none;appearance:none;position:relative;z-index:3
 }
-.form{
-  display:flex;flex-direction:column;gap:12px
+.pass::placeholder{color:#c9c9d0}
+.eye{font-size:21px;color:#c7c8ce;cursor:pointer;padding:12px 4px;position:relative;z-index:4}
+.error{height:25px;color:#ff6b72;font-size:16px;padding:5px 19px}
+.passNext{bottom:65px}
+
+.progress{position:fixed;left:20px;right:20px;bottom:210px;height:5px;background:#34353b;border-radius:8px;overflow:hidden}
+.fill{height:100%;width:0;background:#1687f5}
+.checkText{position:fixed;left:0;right:0;bottom:235px;text-align:center;color:#ddd;font-size:21px;font-weight:500}.checkPercent{position:fixed;left:0;right:0;bottom:266px;text-align:center;color:#aaa;font-size:17px}
+.dots{display:inline-block;width:24px;text-align:left}
+.prank{opacity:0}.prank.fadeIn{animation:prankReveal 3s ease forwards}@keyframes prankReveal{from{opacity:0}to{opacity:1}}
+.black{position:fixed;inset:0;background:#000;z-index:9}
+.matrix{position:fixed;inset:0;background:#000;z-index:10}
+canvas{display:block;width:100%;height:100%}
+.prank{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:25px;text-align:center;color:#00ff66;font-size:29px;font-weight:800;text-shadow:0 0 12px rgba(0,255,102,.55)}
+@media(max-width:500px){
+ .top{height:142px;padding-top:47px}.brand{font-size:30px}.logoImg{width:42px;height:42px}
+ .back{left:38px;top:61px}.help{right:37px;top:58px}
+ .title{font-size:28px;margin-top:24px;margin-bottom:29px}
+ .field,.passfield{height:68px;border-radius:22px}
+ .phone,.pass{font-size:23px}.hint{font-size:17px}
+ .next{height:62px;font-size:21px;border-radius:21px;bottom:108px}
+ .legal{font-size:15px}
+ .passwordTitle{font-size:29px}.passwordHint{font-size:16px}
+ .passNext{bottom:64px}
 }
-.label{
-  color:#a6a7ac;font-size:13px;margin:0 3px -5px
-}
-.input{
-  width:100%;height:52px;border:1px solid #35373d;border-radius:14px;
-  background:#24262b;color:#fff;padding:0 16px;font-size:16px;
-  outline:none
-}
-.input::placeholder{color:#777a82}
-.input:focus{
-  border-color:#62656e;
-  box-shadow:0 0 0 3px rgba(255,255,255,.04)
-}
-button{
-  width:100%;height:52px;border:0;border-radius:14px;
-  background:#303238;color:#777b84;font-size:16px;font-weight:700;
-  margin-top:3px;transition:.15s
-}
-button.enabled{
-  background:#1687ff;color:#fff
-}
-button:active{transform:scale(.99)}
-.help{
-  position:absolute;right:18px;bottom:18px;
-  width:38px;height:38px;border-radius:50%;
-  border:1px solid #44464d;background:#24262b;color:#d5d6da;
-  font-size:20px;display:grid;place-items:center
-}
-.progress{
-  display:none;margin-top:16px;text-align:center
-}
-.progressText{
-  color:#b8bac0;font-size:13px;margin-bottom:9px
-}
-.bar{
-  width:100%;height:5px;background:#303238;border-radius:99px;overflow:hidden
-}
-.fill{
-  height:100%;width:0;background:#1687ff;border-radius:99px
-}
-.pct{
-  margin-top:7px;color:#777b84;font-size:12px
-}
-.modal{
-  display:none;position:fixed;inset:0;background:rgba(0,0,0,.62);
-  align-items:center;justify-content:center;padding:20px;z-index:10
-}
-.modalBox{
-  width:min(330px,100%);background:#24262b;border:1px solid #3a3c43;
-  border-radius:18px;padding:23px;text-align:center
-}
-.modalBox p{
-  margin:0 0 18px;font-size:16px;line-height:1.4
-}
-.modalBox button{
-  background:#1687ff;color:#fff;margin:0
-}
-#matrix{
-  display:none;position:fixed;inset:0;background:#000;z-index:20
-}
-#matrix canvas{
-  position:absolute;inset:0;width:100%;height:100%
-}
-#final{
-  position:absolute;inset:0;display:flex;align-items:center;
-  justify-content:center;text-align:center;padding:25px;
-  color:#00ff66;font-family:monospace;font-size:clamp(23px,7vw,42px);
-  font-weight:800;text-shadow:0 0 9px #00ff66,0 0 25px #00ff66;
-  opacity:0
-}
-#final.hidden{display:none}
-#final.fadeIn{
-  display:flex;
-  animation:fadeIn 3s forwards
-}
-@keyframes fadeIn{
-  from{opacity:0}
-  to{opacity:1}
-}
+
+.helpModal{position:fixed;inset:0;background:rgba(0,0,0,.52);z-index:30;display:flex;align-items:center;justify-content:center;padding:28px}
+.helpBox{width:min(360px,100%);background:#303138;border-radius:22px;padding:25px 23px 22px;box-shadow:0 18px 50px rgba(0,0,0,.45);text-align:center}
+.helpTitle{font-size:23px;font-weight:600;margin-bottom:14px}
+.helpText{font-size:18px;line-height:1.35;color:#e8e8ec}
+.helpClose{margin-top:19px;width:100%;height:46px;border:0;border-radius:15px;background:#1687f5;color:#fff;font-size:18px}
+
 </style>
 </head>
 <body>
 
-<div class="screen" id="loginScreen">
+<section id="phoneScreen" class="screen">
   <div class="top">
-    <div class="logo" aria-label="MAX">
-      <img
-        src="data:image/png;base64,REPLACE_WITH_EMBEDDED_MAX_LOGO"
-        alt="MAX"
-      >
-    </div>
+    <div class="back">‹</div>
+    <div class="brand"><img class="logoImg" alt="Max"><span>Max</span></div>
+    <div class="help">?</div>
   </div>
 
-  <div class="content">
-    <h1>Вход в MAX</h1>
-    <div class="subtitle">Введите номер телефона, чтобы продолжить</div>
+  <div class="title">С каким номером<br>телефона хотите войти?</div>
 
-    <form class="form" id="phoneForm">
-      <div class="label">Номер телефона</div>
-      <input
-        class="input"
-        id="phone"
-        inputmode="numeric"
-        autocomplete="off"
-        placeholder="+7"
-      >
-      <button id="phoneButton" type="submit" disabled>Продолжить</button>
-    </form>
-
-    <form class="form" id="passwordForm" style="display:none">
-      <div class="label">Пароль</div>
-      <input
-        class="input"
-        id="password"
-        type="password"
-        autocomplete="off"
-        placeholder="Введите пароль"
-      >
-      <button id="passwordButton" type="submit" disabled>Войти</button>
-    </form>
-
-    <div class="progress" id="progress">
-      <div class="progressText">Проверка данных...</div>
-      <div class="bar">
-        <div class="fill" id="fill"></div>
-      </div>
-      <div class="pct" id="pct">0%</div>
-    </div>
+  <div class="field">
+    <span class="flag">🇷🇺</span><span>+7</span>
+    <input id="phone" class="phone numberInput" inputmode="numeric" autocomplete="off" maxlength="13"
+           placeholder="123 456 78 90" aria-label="Номер телефона">
   </div>
 
-  <button class="help" id="help" type="button">?</button>
-</div>
-
-<div class="modal" id="modal">
-  <div class="modalBox">
-    <p>Заполните номер телефона и пароль</p>
-    <button id="closeModal" type="button">Понятно</button>
-  </div>
-</div>
-
-<section id="matrix">
-  <canvas id="canvas"></canvas>
-  <div id="final" class="hidden">ВАШИ ДАННЫЕ УКРАДЕНЫ</div>
+  <button id="phoneNext" class="next" disabled>Продолжить</button>
+  <div class="legal">Нажимая «Продолжить», вы принимаете<br><span>политику конфиденциальности, пользовательское<br>соглашение и правила персональных<br>рекомендаций</span></div>
 </section>
+
+<section id="passScreen" class="screen hidden">
+  <div class="top">
+    <div class="back">‹</div>
+    <div class="brand"><img class="logoImg" alt="Max"><span>Max</span></div>
+    <div class="help">?</div>
+  </div>
+  <div class="passwordWrap">
+    <div class="passwordTitle">Введите пароль</div>
+    <div class="passwordHint">Пароль для входа в аккаунт</div>
+    <div class="passfield">
+      <input id="password" class="pass" type="password" autocomplete="off" placeholder="Пароль" aria-label="Пароль">
+      <span id="eye" class="eye">◉</span>
+    </div>
+    <div id="error" class="error"></div>
+  </div>
+  <button id="passNext" class="next passNext" disabled>Продолжить</button>
+</section>
+
+<div id="progressLayer" class="hidden">
+  <div id="checkPercent" class="checkPercent">0%</div><div class="checkText">Проверка данных<span class="dots">...</span></div>
+  <div class="progress"><div id="fill" class="fill"></div></div>
+</div>
+
+<div id="black" class="black hidden"></div>
+
+<div id="matrix" class="matrix hidden">
+  <canvas id="canvas"></canvas>
+  <div id="final" class="prank hidden">ВАШИ ДАННЫЕ УКРАДЕНЫ</div>
+</div>
+
+<div id="helpModal" class="helpModal hidden">
+  <div class="helpBox">
+    <div class="helpTitle">Помощь</div>
+    <div class="helpText">Заполните номер телефона и пароль</div>
+    <button id="helpClose" class="helpClose">Понятно</button>
+  </div>
+</div>
 
 <script>
 document.addEventListener('DOMContentLoaded',()=>{
-const phoneForm=document.getElementById('phoneForm');
-const passwordForm=document.getElementById('passwordForm');
-const phone=document.getElementById('phone');
-const password=document.getElementById('password');
-const phoneButton=document.getElementById('phoneButton');
-const passwordButton=document.getElementById('passwordButton');
-const progress=document.getElementById('progress');
-const fill=document.getElementById('fill');
-const pct=document.getElementById('pct');
-const loginScreen=document.getElementById('loginScreen');
-const matrix=document.getElementById('matrix');
-const help=document.getElementById('help');
-const modal=document.getElementById('modal');
-const closeModal=document.getElementById('closeModal');
-
-let phoneDigits='';
-
-phone.addEventListener('input',()=>{
-  let digits=phone.value.replace(/\D/g,'');
-  if(digits.startsWith('7')) digits=digits.slice(1);
-  digits=digits.slice(0,10);
-  phoneDigits=digits;
-
-  let formatted='+7';
-  if(digits.length>0) formatted+=' '+digits.slice(0,3);
-  if(digits.length>3) formatted+=' '+digits.slice(3,6);
-  if(digits.length>6) formatted+='-'+digits.slice(6,8);
-  if(digits.length>8) formatted+='-'+digits.slice(8,10);
-
-  phone.value=formatted;
-  phoneButton.disabled=digits.length!==10;
-  phoneButton.classList.toggle('enabled',digits.length===10);
-});
-
-phoneForm.addEventListener('submit',e=>{
-  e.preventDefault();
-  if(phoneDigits.length!==10)return;
-
-  phoneForm.style.display='none';
-  passwordForm.style.display='flex';
-  password.focus();
-});
-
-password.addEventListener('input',()=>{
-  const ok=password.value.length>=8;
-  passwordButton.disabled=!ok;
-  passwordButton.classList.toggle('enabled',ok);
-});
-
-passwordForm.addEventListener('submit',e=>{
-  e.preventDefault();
-  if(password.value.length<8)return;
-
-  phone.value='';
-  password.value='';
-  phoneDigits='';
-
-  passwordForm.style.display='none';
-  progress.style.display='block';
-
-  let n=0;
-  const timer=setInterval(()=>{
-    n=Math.min(100,n+2);
-    fill.style.width=n+'%';
-    pct.textContent=n+'%';
-
-    if(n>=100){
-      clearInterval(timer);
-
-      setTimeout(()=>{
-        loginScreen.style.display='none';
-        matrix.style.display='block';
-        startMatrix();
-      },1000);
-    }
-  },35);
-});
-
-help.addEventListener('click',()=>{
-  modal.style.display='flex';
-});
-
-closeModal.addEventListener('click',()=>{
-  modal.style.display='none';
-});
-
-modal.addEventListener('click',e=>{
-  if(e.target===modal)modal.style.display='none';
-});
-
-function startMatrix(){
- const canvas=document.getElementById('canvas');
- const ctx=canvas.getContext('2d');
-
- canvas.width=innerWidth;
- canvas.height=innerHeight;
-
- const size=16;
- const columns=Math.ceil(canvas.width/size);
- const drops=Array(columns).fill(1);
-
- const chars='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-
- function frame(){
-   ctx.fillStyle='rgba(0,0,0,.09)';
-   ctx.fillRect(0,0,canvas.width,canvas.height);
-
-   ctx.fillStyle='#00ff66';
-   ctx.font=size+'px monospace';
-
-   for(let i=0;i<drops.length;i++){
-     const ch=chars[Math.floor(Math.random()*chars.length)];
-     ctx.fillText(ch,i*size,drops[i]*size);
-
-     if(
-       drops[i]*size>canvas.height &&
-       Math.random()>.975
-     ){
-       drops[i]=0;
-     }
-
-     drops[i]++;
-   }
- }
-
- const timer=setInterval(frame,45);
-
- setTimeout(()=>{
-   const final=document.getElementById('final');
-   final.classList.remove('hidden');
-
-   requestAnimationFrame(()=>{
-     final.classList.add('fadeIn');
-   });
- },4500);
-}
-
-window.addEventListener('resize',()=>{});
-});
-</script>
-
-</body>
-</html>
+const logoData='data:image/png;base64,'+[
+  "iVBORw0KGgoAAAANSUhEUgAAAFEAAABKCAYAAADDnrhuAAABCmlDQ1BJQ0MgUHJvZmlsZQAAeJxjYGAyYAACJgEGhty8kqIgdyeFiMgoBQYkkJhcXMCAGzAy",
+  "MHy7BiIZGC7r4lGHC3CmpBYnA+kPQFxSBLQcaGQKkC2SDmFXgNhJEHYPiF0UEuQMZC8AsjXSkdhJSOzykoISIPsESH1yQRGIfQfIDsnNKU1GuJuBJzUvNBhI",
+  "RwCxDEMxQxCDO4MTGX7ACxDhmb+IgcHiKwMD8wSEWNJMBobtrQwMErcQYipAP/C3MDBsO1+QWJQIFmIBYqa0NAaGT8sZGHgjGRiELzAwcEVj2oGICxx+tQD7",
+  "1Z0hHwjTGXIYUhkUGDwZ8hiSGfSALCMGAwZDBjNcfgEAsp9A2ZPrFzMAACTQSURBVHic1bxZj2RJlt/3O8fM7nX32HKrrburt+nuGc2MxCZHI4pkc5NIgQ8C",
+  "JD3pCwgC9KzvpRdBAKEHQiIBSgQ4HGqEmd7X6q7sqqyqzIzF3e81O+fowa5HRK5VOTOCIAMiIzz9Lnb/duys/3PlP3nwP3IYEcHt4fLMR+K5zy+M0Jee99pT",
+  "Im6uu5z/ymOfu+4r77Nc53XzPTyriHzufJ04XDee/05EyK8//bkT4rmJHR5a/Nnf1+NzQPk8AJ+7XkQgcnsC+prvXjYO1zucp+EIN8vxivm/BLzbI0fcnHiz",
+  "Iq9cYuTw1KHXNwlYHni5lzigaPgzx7k0zIwQEEmICLHcNES6VHgDDxBHJDjgIiIgQdya2+HRIgIiSKn0ayiYGe4dWNVlnm79nigiKSyWKYdEqIuI33oOgciE",
+  "pyDS8sh2jdJh0QLeTBIPQN4GuWOqy3/fApIOJOI3/4WSEqBpAczxBXDJQkopNBTM5bDdjEA8MCCl1KXXr5Fd9mSfUURIOwCXEgoEhlnF3ckqROj19EUWcMRR",
+  "JSLsBekREeIlcnhb6vPhw8u3w7Ofb7Zf3ALnIGW3tuMirS59qRVbrpWxJn3SCTQLSYUWDQ9jnkyITGhCpYRQQDLSn5DmfdcEC1CxzCmcwEhCmFdBgiSCqGEY",
+  "pCCXRDTruIcjIgi+rEDfESF5WXy/eXpxESU6PiEgz9iOZ3TiQTRfPYJ4RkfdSNkNgLd/O2D9tziOktMqkMC9SeBU69cMyUjKkV
